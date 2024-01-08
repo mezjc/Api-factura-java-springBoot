@@ -85,4 +85,11 @@ public class InvoiceServiceImpl implements InvoiceService {
     public void deleteOneInvoice(Long id) {
 
     }
+
+    @Override
+    public Invoice getOneInvoiceByName(String name) {
+        Customer customer = customerRepository.findByName(name);
+        System.out.println(customer + " esto es desde el service");
+        return getOneInvoice(customer.getId());
+    }
 }

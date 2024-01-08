@@ -34,6 +34,11 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public Customer getOneByName(String name) {
+        return customerRepository.findByName(name);
+    }
+
+    @Override
     public Customer createOneCustomer(CustomerPropfileDTO customerPropfileDTO) {
         boolean customerExists = customerRepository.existsCustomerByDni(customerPropfileDTO.getDni());
 

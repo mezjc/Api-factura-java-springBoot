@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     boolean existsCustomerByDni(String dni);
+
+    Customer findByName (String name);
 }

@@ -18,5 +18,5 @@ public interface InvoiceService {
     void deleteOneInvoice(Long id);
 
 
-
+    Invoice getOneInvoiceByName(String name);
 }

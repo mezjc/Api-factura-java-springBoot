@@ -28,4 +28,11 @@ public class InvoiceController {
     public ResponseEntity<Invoice> getOne(@Validated @PathVariable Long id){
         return ResponseEntity.ok().body(invoiceService.getOneInvoice(id));
     }
+
+    @GetMapping("/getByName/{client}")
+    public ResponseEntity<Invoice> getByName(@Validated @PathVariable String client){
+        return ResponseEntity.ok().body(invoiceService.getOneInvoiceByName(client));
+    }
+
+
 }

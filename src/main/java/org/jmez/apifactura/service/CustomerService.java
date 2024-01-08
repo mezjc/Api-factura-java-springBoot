@@ -13,6 +13,8 @@ public interface CustomerService {
 
     Customer getOneCustomer(Long id);
 
+    Customer getOneByName(String name);
+
     Customer createOneCustomer(CustomerPropfileDTO customerPropfileDTO);
     Customer updateCustomer(Long id ,CustomerPropfileDTO CustomerPropfileDTO);
 
